@@ -1,41 +1,60 @@
-# Side code editor for ChatGPT practice
+# Kode
 
-A self-contained code editor for writing answers while discussing programming with ChatGPT.
+A self-contained code editor for working beside a ChatGPT conversation.
 
-## Open the editor
+## Open Kode
 
-1. Open [CS50_Editor.html](CS50_Editor.html) and download the raw file.
-2. Open the downloaded file in Chrome or another modern browser.
+1. Download [Kode.html](Kode.html) using GitHub's raw-file download.
+2. Open it in Chrome or another modern browser.
 3. Put its window beside your ChatGPT conversation.
-4. Write your answer, choose **Copy answer**, and paste the code into the chat.
+4. Write your code, select **Copy answer**, and paste it into the chat.
 
-Everything the editor needs is bundled in the HTML file. No installation, build, account, or internet connection is required after downloading it.
+Everything is bundled in the HTML file. No installation, build, account, or internet connection is required after downloading.
 
-**Copy answer copies source code as plain text**, without line numbers or screenshots. If automatic clipboard access is blocked, the editor offers a text-selection fallback.
+**Copy answer copies the active file's source as plain text**, without line numbers or screenshots. If automatic clipboard access is blocked, Kode provides a text-selection fallback.
+
+## Files and tabs
+
+- **New file** creates a blank file and opens its own editor tab.
+- Switch files using the tabs or the file list.
+- **Rename** changes the active file's name. Recognized extensions select its syntax mode.
+- **Delete** removes the active file after confirmation.
+- **Restore deleted** recovers the most recently deleted file, including its code. Only the latest deletion is retained.
+- **Open** imports one or more source files into separate tabs. Existing files are preserved; duplicate imported names receive a number.
+- **Save code** downloads the active file as a plain-text source file with its current name.
+
+Each file has its own code, language, cursor position, and undo history while Kode stays open. File contents, names, language modes, the active tab, and the most recently deleted file are saved in browser storage when available. Undo history is retained during the session, not across reloads.
+
+The last file can be deleted; Kode then opens a blank file so the workspace remains usable.
+
+Names must be unique within the workspace and cannot contain slashes. Changing a language mode updates the active file's extension without overwriting another file.
 
 ## Reuse in another ChatGPT conversation
 
 Share this repository and say:
 
-> Use the code editor from https://github.com/sbf-developer/side-code-editor-within-gpt-chat for our practice. Give me one small coding problem at a time. Let me answer with code, pseudocode, or a mix, then review my attempt. Keep the solution hidden until I ask for it.
+> Use Kode from https://github.com/sbf-developer/side-code-editor-within-gpt-chat as my code editor. Retrieve Kode.html so I can reuse it beside this conversation.
 
-Ask ChatGPT to retrieve `CS50_Editor.html` from this repository or attach your downloaded copy. Interactive previews depend on the ChatGPT interface. This file does not install a native ChatGPT sidebar or enable Canvas; opening it in a separate browser window works independently of those features.
+For practice, you can add:
 
-The editor cannot see the conversation, and ChatGPT cannot see unsent edits. Use **Copy answer** to share an attempt.
+> Give me one small coding problem at a time. Let me answer with code, pseudocode, or a mix, then review my attempt. Keep the solution hidden until I ask.
 
-## Features
+Interactive previews depend on the ChatGPT interface. Kode does not install a native ChatGPT sidebar or enable Canvas. Opening it in a separate browser window works independently of those features.
 
-- CodeMirror editing with syntax highlighting and line numbers.
+Kode cannot see the conversation, and ChatGPT cannot see unsent edits. Copy your answer into the chat to share it.
+
+## Editor features
+
+- CodeMirror syntax highlighting and line numbers.
 - C, Python, SQL, JavaScript, and plain text/pseudocode modes.
 - Tab/Shift+Tab indentation, automatic indentation, bracket pairing and matching.
-- Undo/redo, find/replace, and comment shortcuts.
+- Independent file tabs, undo/redo, find/replace, and comment shortcuts.
 - Dark/light themes and adjustable text size.
-- Local browser draft saving, where browser storage is available.
-- Open a source file and download your code using **Save code**.
+- Offline use and browser-local workspace saving.
 
-The editor edits text; it does not compile or run programs. The bundled example is the vowel-counting exercise from our CS50 practice.
+Kode edits text; it does not compile or run programs.
 
-## Useful shortcuts
+## Shortcuts
 
 | Action | Shortcut |
 | --- | --- |
@@ -43,17 +62,22 @@ The editor edits text; it does not compile or run programs. The bundled example 
 | Undo / redo | Ctrl+Z / Ctrl+Shift+Z |
 | Find / replace | Ctrl+F / Ctrl+H |
 | Toggle comment | Ctrl+/ |
-| Save source code | Ctrl+S |
+| Save active source file | Ctrl+S |
 | Select all code | Ctrl+A |
 | Leave editor input | Esc |
+| Switch focused file tabs | Left / right arrow |
 
-On Mac, the editor also provides Command-key equivalents. Browser or OS shortcuts may take precedence.
+Command-key equivalents are provided on Mac. Browser or OS shortcuts may take precedence.
 
-Drafts are local to the browser and file location. Use **Save code** to keep a separate copy before moving the editor or clearing browser data.
+## Keeping your work
 
-## Files and maintenance
+Workspace drafts stay in your browser and are not uploaded. Use **Save code** for each file to keep independent copies, especially before moving or renaming the downloaded HTML, changing browsers, or clearing browser data.
 
-- `CS50_Editor.html`: complete offline editor, styles, scripts, and bundled dependencies.
-- `AGENTS.md`: instructions for assistants reusing or maintaining the editor.
+When old and new versions can access the same browser storage, Kode imports the previous single-file editor's saved draft on first use. If you downloaded the new version to another location and your draft does not appear, save your code in the old editor and use **Open** in Kode.
 
-CodeMirror 5.65.16 is included under the MIT license. Its copyright and complete license notice are embedded in the HTML source.
+## Repository files
+
+- `Kode.html`: complete offline editor with all styles, scripts, and dependencies.
+- `AGENTS.md`: guidance for assistants reusing or maintaining Kode.
+
+CodeMirror 5.65.16 is bundled under the MIT license. Its copyright and full license notice are embedded in the HTML source.
