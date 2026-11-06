@@ -22,6 +22,10 @@ Read `README.md` before helping a user reuse it.
 - Preserve file creation, tabs, switching, renaming, deletion confirmation, recovery of the latest deletion, and local workspace saving.
 - Keep each file's content, syntax mode, selection, and undo history independent during the session.
 - Do not silently overwrite existing files when importing or renaming.
+- Use inline file naming with direct click and key handlers; never require HTML form submission. Restricted previews can block forms even while allowing scripts.
+- Keep file actions available through left-click menus and explorer controls; right-click should be optional.
+- Show files directly in the explorer. Do not add a fake KODE root folder or a decorative code logo.
+- Test file creation and renaming inside an iframe with scripts allowed and forms blocked, as well as the normal page.
 - Keep clipboard fallbacks, keyboard editing, language selection, and the embedded CodeMirror copyright and MIT license.
 - Do not add an Exercise button or the removed tagline.
 - Avoid publishing private workspace drafts or browser storage.

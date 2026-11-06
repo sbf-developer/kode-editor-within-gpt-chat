@@ -15,19 +15,25 @@ Everything is bundled in the HTML file. No installation, build, account, or inte
 
 ## Files and tabs
 
-- **New file** creates a blank file and opens its own editor tab.
-- Switch files using the tabs or the file list.
-- **Rename** changes the active file's name. Recognized extensions select its syntax mode.
-- **Delete** removes the active file after confirmation.
-- **Restore deleted** recovers the most recently deleted file, including its code. Only the latest deletion is retained.
-- **Open** imports one or more source files into separate tabs. Existing files are preserved; duplicate imported names receive a number.
-- **Save code** downloads the active file as a plain-text source file with its current name.
+- Left-click **+** in the explorer, or choose **File → New file**, to start a new file.
+- Type the name inline, then press **Enter** or click **✓**. Press **Esc** or **×** to cancel.
+- Left-click **⋯** beside a file for its actions. Right-clicking a file or tab opens the same menu.
+- Choose **Rename…** to edit the name inline. **F2** renames the active file. Recognized extensions select its syntax mode.
+- Choose **Delete** to remove the selected file after confirmation.
+- **File → Restore deleted** recovers the latest deleted file, including its code. Only the most recent deletion is retained.
+- **File → Open files…** imports one or more source files into separate tabs. Existing files are preserved; duplicate imported names receive a number.
+- **Save code**, or **File → Save file**, downloads source text with its current name.
+- Click **Files** in the title bar to show or hide the explorer.
 
-Each file has its own code, language, cursor position, and undo history while Kode stays open. File contents, names, language modes, the active tab, and the most recently deleted file are saved in browser storage when available. Undo history is retained during the session, not across reloads.
+The explorer lists files directly. Kode is the app name, not a folder or filesystem root.
 
-The last file can be deleted; Kode then opens a blank file so the workspace remains usable.
+Each file keeps its own code, language, cursor position, and undo history while Kode stays open. File contents, names, modes, the active tab, and the latest deleted file are saved in browser storage when available. Undo history is retained during the session, not across reloads.
 
-Names must be unique within the workspace and cannot contain slashes. Changing a language mode updates the active file's extension without overwriting another file.
+Deleting the final file opens a blank file so the workspace remains usable.
+
+Names must be unique within the workspace and cannot contain slashes. Changing a language mode updates the file extension without overwriting another file.
+
+File creation and renaming use direct button and keyboard handlers, with no HTML form submission. They work in restricted previews that allow scripts but block forms. Such previews may also block browser storage; Kode displays that limitation and keeps editing available for the current session.
 
 ## Reuse in another ChatGPT conversation
 
@@ -64,6 +70,7 @@ Kode edits text; it does not compile or run programs.
 | Toggle comment | Ctrl+/ |
 | Save active source file | Ctrl+S |
 | Select all code | Ctrl+A |
+| Rename active file | F2 |
 | Leave editor input | Esc |
 | Switch focused file tabs | Left / right arrow |
 
