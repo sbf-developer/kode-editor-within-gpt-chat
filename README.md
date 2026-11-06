@@ -2,6 +2,10 @@
 
 A self-contained code editor for working beside a ChatGPT conversation.
 
+![Kode open in ChatGPT’s side preview beside a coding practice conversation](docs/kode-in-chat.png)
+
+*Kode in ChatGPT’s side preview, with the conversation alongside it.*
+
 ## Open Kode
 
 1. Download [Kode.html](Kode.html) using GitHub's raw-file download.
