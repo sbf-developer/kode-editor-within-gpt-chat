@@ -43,7 +43,7 @@ File creation and renaming use direct button and keyboard handlers, with no HTML
 
 Share this repository and say:
 
-> Use Kode from https://github.com/sbf-developer/side-code-editor-within-gpt-chat as my code editor. Retrieve Kode.html so I can reuse it beside this conversation.
+> Use Kode from https://github.com/sbf-developer/kode-editor-within-gpt-chat as my code editor. Retrieve Kode.html so I can reuse it beside this conversation.
 
 For practice, you can add:
 
@@ -56,11 +56,11 @@ Kode cannot see the conversation, and ChatGPT cannot see unsent edits. Copy your
 ## Editor features
 
 - CodeMirror syntax highlighting and line numbers.
-- C, Python, SQL, JavaScript, and plain text/pseudocode modes.
-- Tab/Shift+Tab indentation, automatic indentation, bracket pairing and matching.
+- C, Python, SQL, JavaScript, HTML/Jinja, CSS, and plain text/pseudocode modes. HTML/Jinja highlights template tags alongside HTML, CSS, and inline JavaScript.
+- Tab/Shift+Tab indentation, automatic indentation, bracket pairing and matching, and automatic closing tags in HTML.
 - Independent file tabs, undo/redo, find/replace, and comment shortcuts.
 - Dark/light themes and adjustable text size.
-- Offline use and browser-local workspace saving.
+- Offline use and browser-local workspace saving. Existing `.html` and `.css` drafts saved as plain text gain highlighting when opened with the new version.
 
 Kode edits text; it does not compile or run programs.
 
