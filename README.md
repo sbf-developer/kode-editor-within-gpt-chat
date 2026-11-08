@@ -6,10 +6,20 @@ A self-contained light code editor for working beside a ChatGPT conversation.
 
 *Kode in ChatGPT’s side preview, with the conversation alongside it.*
 
-## Open Kode
+## Open Kode beside a ChatGPT conversation
+
+In a ChatGPT interface that supports interactive HTML previews, share this repository and ask:
+
+> Open the full `Kode.html` from https://github.com/sbf-developer/kode-editor-within-gpt-chat as an **interactive HTML preview in the panel beside this chat**. I want to type in the editor, create files, and use Copy answer. Show the working app, not a screenshot or a view of its source code.
+
+If ChatGPT produces an HTML file in **Outputs**, open that file's preview. Keep the chat visible alongside it. Use **Copy answer** in Kode, then paste the code into the conversation when you want feedback. Kode cannot read the chat or send unsent edits on its own.
+
+The side preview is a ChatGPT interface feature, so whether it opens automatically depends on the conversation and available tools. A Library or GitHub link by itself may show a file or start a download rather than launch the editor in the side panel.
+
+### Open Kode in a browser
 
 1. Download [Kode.html](Kode.html) using GitHub's raw-file download.
-2. Open it in Chrome or another modern browser.
+2. Open the downloaded file in Chrome or another modern browser.
 3. Put its window beside your ChatGPT conversation.
 4. Write your code, select **Copy answer**, and paste it into the chat.
 
@@ -43,13 +53,13 @@ File creation and renaming use direct button and keyboard handlers, with no HTML
 
 Share this repository and say:
 
-> Use Kode from https://github.com/sbf-developer/kode-editor-within-gpt-chat as my code editor. Retrieve Kode.html so I can reuse it beside this conversation.
+> Open Kode.html from https://github.com/sbf-developer/kode-editor-within-gpt-chat as a working, interactive HTML preview in the panel beside this chat. Keep the editor usable; do not show only code or an image.
 
 For practice, you can add:
 
 > Give me one small coding problem at a time. Let me answer with code, pseudocode, or a mix, then review my attempt. Keep the solution hidden until I ask.
 
-Interactive previews depend on the ChatGPT interface. Kode does not install a native ChatGPT sidebar or enable Canvas. Opening it in a separate browser window works independently of those features.
+Interactive previews depend on the ChatGPT interface. Kode does not install a native ChatGPT sidebar or enable Canvas. The browser workflow above works independently of a ChatGPT side preview.
 
 Kode cannot see the conversation, and ChatGPT cannot see unsent edits. Copy your answer into the chat to share it.
 
