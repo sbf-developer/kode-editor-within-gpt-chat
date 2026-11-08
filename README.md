@@ -2,7 +2,7 @@
 
 A self-contained light code editor for working beside a ChatGPT conversation.
 
-![Kode open in ChatGPT’s side preview beside a coding practice conversation](docs/kode-in-chat.png)
+![Kode open in ChatGPT’s side preview beside a coding practice conversation](docs/kode-in-chat-current.png)
 
 *Kode in ChatGPT’s side preview, with the conversation alongside it.*
 
